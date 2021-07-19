@@ -5,31 +5,29 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import MainSection from "../components/reusable/MainSection"
 import Infoblock from "../components/reusable/Infoblock"
-import DualInfoblock from "../components/reusable/DualInfoblock"
-import TeamPhotosection from "../components/About/TeamPhotosection"
+import Contact from "../components/Contact/contact"
 
-const AboutPage = ({data}) => (
+
+const ContactPage = ({data}) => (
   
   <Layout>
     <SEO title="Home" />
     <MainSection
       img={data.img.childImageSharp.fluid}
-      title="About LearnCodeOnline" 
+      title="Contact Us" 
       subtitle=""
       mainclass="about-background"
     />
-    <DualInfoblock heading="A Message from CEO"
-      img="https://images.pexels.com/photos/1261427/pexels-photo-1261427.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
-    />
-    <Infoblock heading= "Our Vision" />
-    <TeamPhotosection/>
+    
+    <Infoblock heading= "How can we help?" />
+    <Contact />
 
   </Layout>
 )
 
 export const query = graphql`
 {
-  img:file(relativePath: {eq: "about.png"}) {
+  img:file(relativePath: {eq: "contact.png"}) {
     childImageSharp {
       fluid {
         ...GatsbyImageSharpFluid_tracedSVG  
@@ -40,4 +38,4 @@ export const query = graphql`
 `
 
 
-export default AboutPage
+export default ContactPage
