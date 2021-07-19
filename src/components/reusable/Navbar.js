@@ -14,7 +14,7 @@ export default function Navbar() {
     },
     { id: 2, url: "/about/", text: "About" },
     { id: 3, url: "/Services", text: "Services" },
-    { id: 4, url: "/Contact/", text: "Contact Us" },
+    { id: 4, url: "/contact/", text: "Contact Us" },
   ])
   const [navbarState, navbarClass] = useState("collapse navbar-collapse")
   const toggleMenu = () => {
