@@ -13,7 +13,7 @@ export default function Navbar() {
       text: "Home",
     },
     { id: 2, url: "/about/", text: "About" },
-    { id: 3, url: "/Services", text: "Services" },
+    // { id: 3, url: "/Services", text: "Services" },
     { id: 4, url: "/contact/", text: "Contact Us" },
   ])
   const [navbarState, navbarClass] = useState("collapse navbar-collapse")
@@ -38,7 +38,7 @@ export default function Navbar() {
         {menuState.map((menu) => {
           return (
             <li className="nav-item">
-            <Link key = {menu.id} to= {menu.url} className="nav-link text-white">
+            <Link key = {menu.id} to= {menu.url} className="nav-link text-white mr-3">
               {menu.text}
             </Link>
           </li>
